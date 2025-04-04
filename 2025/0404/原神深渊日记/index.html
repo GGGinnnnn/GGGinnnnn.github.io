@@ -3,7 +3,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | 无人之境</title>
+    <title>原神深渊日记 | 无人之境</title>
     <meta name="author" content="Gin" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -46,7 +46,9 @@
 
 
 
-<script src="/js/lib/search.js"></script>
+
+
+
 
 
 
@@ -158,44 +160,32 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+            <div class="article">
+    <div>
+        <h1>原神深渊日记</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/4/4
+        </span>
         
-        <div class="timeline" data-title="about">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/4/4</div>
-                <a href="/2025/0404/About/">
-                    <h3>About</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="原神深渊日记">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/4/4</div>
-                <a href="/2025/0404/%E5%8E%9F%E7%A5%9E%E6%B7%B1%E6%B8%8A%E6%97%A5%E8%AE%B0/">
-                    <h3>原神深渊日记</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
-
             <footer id="footer">
     <div id="footer-wrap">
         <div>
@@ -255,6 +245,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 
     
