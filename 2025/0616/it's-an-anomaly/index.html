@@ -53,7 +53,10 @@
 
 
 <link rel="stylesheet" href="/css/main.css" />
-
+<!-- 加这里 -->
+<!-- <script src="/js/kiana-loader.js"></script> -->
+<script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0-rc.6/dist/autoload.js"></script>
+<script src="/js/live2d-init.js"></script>
     <style>
         body {
             cursor: url('/images/Arrow.ico'), auto;
@@ -271,5 +274,41 @@
     
     <script src="/js/span.js"></script>
     
+
+
+    <!-- 添加看板娘容器
+<div id="live2d-container" style="position:fixed; right:0; bottom:0; z-index:9999; pointer-events:none;"></div>
+
+ 添加看板娘加载脚本 
+<script>
+window.addEventListener('load', () => {
+    // 创建脚本元素
+    const live2dScript = document.createElement('script');
+    live2dScript.src = '/js/live2d.min.js';
+    document.head.appendChild(live2dScript);
+    
+    // 脚本加载完成后初始化看板娘
+    live2dScript.onload = () => {
+        // 创建看板娘容器
+        const canvas = document.createElement('canvas');
+        canvas.id = 'live2d';
+        canvas.width = 150;
+        canvas.height = 300;
+        canvas.style.pointerEvents = 'auto'; // 允许交互
+        document.getElementById('live2d-container').appendChild(canvas);
+        
+        // 加载Kiana模型
+        loadlive2d('live2d', '/live2d_models/kiana/model.json');
+        
+        // 移动端适配
+        if (window.innerWidth <= 768) {
+            canvas.style.transform = 'scale(0.7)';
+            canvas.style.transformOrigin = 'bottom right';
+        }
+    };
+});
+</script> -->
+
+
 </body>
 </html>
