@@ -3,7 +3,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | 无人之境</title>
+    <title>无人之境</title>
     <meta name="author" content="Gin" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -46,9 +46,9 @@
 
 
 
-<script src="/js/lib/search.js"></script>
 
 
+<script src="/js/lib/home.js"></script>
 
 <link rel="stylesheet" href="/css/main.css" />
 <!-- 加这里 -->
@@ -171,169 +171,138 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
-        
-        <div class="timeline" data-title="原神深渊日记25.4.6">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/4/6</div>
-                <a href="/2025/0406/The-Diaries-of-the-Deep-End,-2546/">
-                    <h3>原神深渊日记25.4.6</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/brackgroud.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>无人之境</h1>
+                <h3>Gin</h3>
+                <h5></h5>
             </div>
-        </div>
-        
-        <div class="timeline" data-title="原神深渊日记25.4.18">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/4/18</div>
-                <a href="/2025/0418/The-Diaries-of-the-Deepness-25418/">
-                    <h3>原神深渊日记25.4.18</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="原神深渊日记25.5.6">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/6</div>
-                <a href="/2025/0506/The-Diaries-of-the-Deepness-2556/">
-                    <h3>原神深渊日记25.5.6</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="备忘">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/5/30</div>
-                <a href="/2025/0530/Notes/">
-                    <h3>备忘</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="about">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/6/3</div>
-                <a href="/2025/0603/oh,-about/">
-                    <h3>about</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="mhy装mod">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/6/4</div>
-                <a href="/2025/0604/i'm-so-sorry/">
-                    <h3>mhy装mod</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="原神深渊日记25.6.6">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/6/6</div>
-                <a href="/2025/0606/The-Diaries-of-the-Deepness-of-the-Earth,-2566/">
-                    <h3>原神深渊日记25.6.6</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="原神mod数据异常">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/6/16</div>
-                <a href="/2025/0616/it's-an-anomaly/">
-                    <h3>原神mod数据异常</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="科学上网">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/6/18</div>
-                <a href="/2025/0618/Science-on-the-Internet/">
-                    <h3>科学上网</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="机场推荐">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/6/29</div>
-                <a href="/2025/0629/Airport-recommendations/">
-                    <h3>机场推荐</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="原神深渊日记25.7.24">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/7/24</div>
-                <a href="/2025/0724/undefined/">
-                    <h3>原神深渊日记25.7.24</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
+        </span>
     </div>
 </div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2025/0406/The-Diaries-of-the-Deep-End,-2546/">
+        <h2 class="post-title">原神深渊日记25.4.6</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/4/6
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h4 id="2025年4月6日"><a href="#2025年4月6日" class="headerlink" title="2025年4月6日"></a>2025年4月6日</h4><p>下期深渊预告（图片来自<a target="_blank" rel="noopener" href="https://homdgcat.wiki/gi/monster?lang=CH">玉衡杯</a>）</p>
+<p><img src="https://ggginnnnn.github.io/picx-images-hosting/2025.4.99tj6kmveg.webp" alt="4.16~5.16"></p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2025/0406/The-Diaries-of-the-Deep-End,-2546/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    
+    
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar.png" alt="avatar" />
+        </div>
+        <div class="name">
+            Gin
+        </div>
+        <div class="description">
+            <p>想写什么写什么</p>
+
+        </div>
+
+        
+                
+                    <div class="friend-links">
+                        
+                            <div class="friend-link">
+                                <a target="_blank" rel="noopener" href="https://github.com/GGGinnnnn">
+                                    Github
+                                </a>
+                            </div>
+                            
+                    </div>
+                    <div class="hitokoto">
+
+                        <p id="hitokoto">
+                            <a href="#" id="hitokoto_text">一言获取中~</a>
+                        </p>
+                    </div>
+                    
+                    <script>
+                        fetch('https://v1.hitokoto.cn')
+                            .then(response => response.json())
+                            .then(data => {
+                                const hitokoto = document.querySelector('#hitokoto_text')
+                                hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                                hitokoto.innerText = data.hitokoto
+                            })
+                            .catch(console.error)
+                    </script>
+    </div>
+        
+</div>
+
+</div>
+        
+    </div>
+    
+    
+</div>
+
+
+
 
             <footer id="footer">
     <div id="footer-wrap">
